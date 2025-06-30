@@ -1,35 +1,19 @@
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - develop
-
-permissions:
-  pages: write    # Granting write access to GitHub Pages
-  id-token: write  # Granting write access to id-token (for authentication)
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the static website
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+{
+  "name": "blogging-website",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarimkarim/Blogging-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarimkarim/Blogging-Website/issues"
+  },
+  "homepage": "https://github.com/sarimkarim/Blogging-Website#readme",
+  "description": ""
+}
