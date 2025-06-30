@@ -6,7 +6,8 @@ on:
       - develop
 
 permissions:
-  id-token: write  # Granting write access to id-token
+  pages: write    # Granting write access to GitHub Pages
+  id-token: write  # Granting write access to id-token (for authentication)
 
 jobs:
   build:
