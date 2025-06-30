@@ -5,6 +5,9 @@ on:
     branches:
       - develop
 
+permissions:
+  id-token: write  # Granting write access to id-token
+
 jobs:
   build:
     runs-on: ubuntu-latest
